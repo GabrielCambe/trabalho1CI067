@@ -8,8 +8,9 @@ estacionamento: estacionamento.c
 invoke: main
 	./a.out
 
-clean:
-	rm *.o
+temp:
 	rm *~
-purge: clean
+obj:
+	rm *.o
+purge:
 	rm a.out

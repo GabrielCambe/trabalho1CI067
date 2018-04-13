@@ -31,3 +31,32 @@ Mapa do Estacionamento\n\t5 - Consulta de Histórico\n\t6 - Sair\n\nSua opção:
     CLRscr;
   }
 }
+
+void entrada(){
+  char c, *nome_do_cliente, placa_do_veiculo[3]; int tamanho_do_veiculo, horas, minutos;
+  
+  printf("Informe o nome do cliente: ");
+  //while((c = getchar()) != "\n"){  //lê o nome do cliente e coloca um '\0' ao final da leitura
+  //}
+  printf("Informe o tamanho do veículo: ");
+  scanf("%d", &tamanho_do_veiculo);
+  if((tamanho_do_veiculo < 1) || (tamanho_de_veiculo > 4)){
+    printf("Aceitamos apenas veículos de tamanhos 1, 2, 3 e 4.");
+    return;
+  }
+  printf("Informe a placa do veículo:\t");
+
+  //Se o formato da placa estiver incorreto (provavelmente seria bom ler como char e usar atoi depois):
+  printf("A placa do veículo deve possuir exatamente 4 dígitos no formato:\t0000.");
+  return;
+
+  printf("Informe a hora de entrada do veículo no formato HH:mm:");
+
+  //Se os dados forem exatamente iguais a outros:
+  printf("Não foi possível estacionar o veículo. Aparentemente o veículo já está estacionado. Provavelmente ele foi clonado.");
+  return;
+  
+  //Se der boa:
+  printf("Veículo estacionado com sucesso.");
+  return;
+}
