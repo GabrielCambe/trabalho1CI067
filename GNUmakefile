@@ -1,16 +1,17 @@
-main: estacionamento main.o
-	gcc estacionamento.o main.o
-main.o: main.c
+DEPENDENCIAS = strings_obj estacionamento_obj main_obj
+OBJETOS = main.o estacionamento.o strings.o
+main: $(DEPENDENCIAS)
+	gcc $(OBJETOS)
+main_obj: main.c
 	gcc -c main.c
-estacionamento: estacionamento.c
+estacionamento_obj: estacionamento.c
 	gcc -c estacionamento.c
+strings_obj: strings.c
+	gcc -c strings.c
 
-invoke: main
-	./a.out
-
-temp:
+cleant:
 	rm *~
-obj:
+cleano:
 	rm *.o
 purge:
 	rm a.out

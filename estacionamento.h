@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define CLRscr system("clear")
+#include "strings.h"
+
+#define FLUSH_input while(getchar() != '\n')
+#define CLRscr (void) system("clear")
+#define CHAR_
 #define TRUE (1==1)
 
-typedef MAPA_t int m[4][19];
-
+typedef int MAPA_t[4][19];
 void menu();
 void entrada();
 //void saida();

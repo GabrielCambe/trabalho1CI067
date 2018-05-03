@@ -1,7 +1,16 @@
 #include "strings.h"
 
 char* nova_string(){
-  char* nova;
+  char* NOVA_STRING;
+  MALLOC_char(NOVA_STRING, 40);
+
+  return NOVA_STRING;
 }
 
-int aumenta_string();
+char* AUMENTA_string(char* STRING_pequena, int *TAMANHO){
+  char* STRING_MAIOR;
+  STRING_MAIOR = REALLOC_char(STRING_pequena, (*(TAMANHO)) * 2);
+  (*(TAMANHO)) *= 2;
+
+  return STRING_MAIOR;
+}
