@@ -1,10 +1,9 @@
 #include "estacionamento.h"
 
-MAPA_t MAPA;
-
 int main(){
-  while(TRUE)
-    menu();
+  inicializar();
   
+  while(TRUE)
+    menu();  
   return 0;
 }
