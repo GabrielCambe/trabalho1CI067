@@ -163,6 +163,9 @@ void entrada(){
       printf("O horário informado é invalido!\nAperte enter para retornar\n");
       ESPERE_newline_para_retornar;
     }
+	  
+	  //O HORARIO 1:1 É INVÁLIDO TAMBÉM
+	  
     //////////////////////////////////////////////////////////////////////
 
     
@@ -202,6 +205,8 @@ void entrada(){
       for(j = 0; j <= 19; j++){
 	//nesse trecho o carro é estacionado
 	if(((j + tamanho_do_veiculo - 1) <= 19) && (CLIENTES[i][j].ocupado == 0)){
+	
+	//ERRO DE INCLUSÃOL, VOCÊ PRECISA TESTAR SE AS PROXIMAS 4 VAGAS ESTÃO LIVRES, PORQUE SE NÃO VOCÊ ESTARÁ ADICIONANDO UM CARRO A UMA VAGA DE TAMANHO MENOR E AS PROXIMAS VAGAS QUE POSSIVELMENTE ESTÃO OCUPADAS.
 	  for(e = 0; e < tamanho_do_veiculo; e++){
 	    CLIENTES[i][j+e].nome_do_cliente = nome_do_cliente;
 	    CLIENTES[i][j+e].placa_do_veiculo[0] = placa_do_veiculo[0];
@@ -263,7 +268,6 @@ void entrada(){
     //////////////////////////////////////////////////////////////////////
 
   }else{   
-    FLUSH_input;
     printf("\nA cota diária foi excedida, não aceitaremos novos veículos no dia de hoje\nAperte enter para retornar\n");
     ESPERE_newline_para_retornar;
   }
